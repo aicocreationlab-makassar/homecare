@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "browser": "Chromium mobile emulation",
+  "viewport": 320,
+  "checks": [
+    "All six wizard steps without overflow",
+    "Full touch-based assessment submission",
+    "Success loaded from IndexedDB",
+    "All animated content visible when AOS fails to load"
+  ],
+  "pageErrors": []
+}

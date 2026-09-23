@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "date": "2026-09-23T17:40:16.390Z",
+  "browser": "Chromium",
+  "results": [
+    "Login gate, invalid credentials, seed 8 fictitious records",
+    "Blank validation, invalid date, back/next, draft reload, consent, submit, ID format, success reload, escaped text, WhatsApp encoding",
+    "Admin record visible, search/filter/reset, status + note + activity persistence",
+    "WhatsApp settings applied to public summary",
+    "All 12 pages × 8 viewport widths: no horizontal overflow; local navigation files exist",
+    "Mobile public navigation + admin drawer; screenshot artifacts",
+    "Delete cancel/confirm, missing record handling, clear with typed confirmation, no automatic reseed, manual demo reset",
+    "Logout and protected-route redirect"
+  ],
+  "pageErrors": [],
+  "httpFailures": []
+}

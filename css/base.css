@@ -1,0 +1,39 @@
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{font-family:Manrope,Arial,sans-serif;font-size:15px;line-height:1.7;color:var(--ink-900);background:var(--surface)}
+::selection{background:#c4e7de}
+h1,h2,h3,h4{line-height:1.2;letter-spacing:-.04em}
+h1{font-size:clamp(38px,4.4vw,65px);font-weight:600}
+h2{font-size:clamp(30px,3.1vw,43px);font-weight:600}
+h3{font-size:21px;font-weight:700}
+p{color:var(--ink-700)}
+h1 em,h2 em{font-family:Georgia,serif;font-weight:400;color:var(--brand-700)}
+.container{width:min(var(--max-width),calc(100% - 80px));margin-inline:auto}
+.section{padding-block:90px}
+.soft{background:var(--surface-soft)}
+.icon{width:22px;height:22px;vertical-align:middle}
+.eyebrow{font-size:11px;letter-spacing:.15em;font-weight:800;color:var(--brand-700);display:inline-flex;align-items:center;gap:8px;margin-bottom:17px}
+.eyebrow::before{content:'✦';font-size:14px}
+.section-heading{max-width:620px;margin:0 auto 42px;text-align:center}
+.section-heading p{margin-top:20px}
+.section-heading.left{margin:0;max-width:600px;text-align:left}
+.section-top{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:35px}
+.muted{color:var(--ink-700)}
+.small{font-size:12px}
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.stack{display:grid;gap:22px}
+.skip-link{position:fixed;top:-100px;left:20px;z-index:200;background:white;padding:10px}
+.skip-link:focus{top:5px}
+:focus-visible{outline:3px solid #c19627;outline-offset:4px}
+.text-link{font-weight:700;color:var(--brand-700);display:inline-flex;align-items:center;gap:10px;min-height:44px}
+.text-link:hover{gap:15px}
+.content-copy p+p{margin-top:20px}
+.content-copy h2{margin-bottom:24px}
+.content-copy h3{margin:25px 0 12px}
+.content-copy a{text-decoration:underline;color:var(--brand-700)}
+.empty-state{text-align:center;padding:60px 25px}
+.empty-state>.icon{height:45px;width:45px;color:var(--brand-700);margin-bottom:16px}
+.empty-state p{margin:15px 0 22px}
+.noscript{padding:20px;background:#fff1d7}
+.loading-state{padding:80px;text-align:center}

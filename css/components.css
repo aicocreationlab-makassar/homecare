@@ -1,0 +1,48 @@
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:48px;padding:13px 23px;border:1px solid transparent;border-radius:100px;font-size:13px;font-weight:700;background:var(--brand-700);color:white;transition:background .2s,transform .2s}
+.btn:hover{background:var(--brand-900);transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.btn-white{background:#fff;color:var(--brand-900)}
+.btn-white:hover{background:#e7f5f4}
+.btn-outline{background:transparent;border-color:#ffffff65;color:#fff}
+.btn-outline:hover{background:#ffffff18}
+.btn-light{background:#fff;border-color:var(--border);color:var(--ink-900)}
+.btn-light:hover{background:var(--brand-100)}
+.btn-danger{background:var(--danger);color:white}
+.btn-danger:hover{background:#a33232}
+.icon-button{width:44px;height:44px;display:inline-grid;place-items:center;border:1px solid var(--border);background:white;border-radius:12px}
+.icon-button:hover{background:var(--brand-100)}
+.card{background:white;border:1px solid var(--border);border-radius:var(--radius);padding:28px;min-width:0}
+.icon-box{width:48px;height:48px;border-radius:14px;background:var(--brand-100);color:var(--brand-700);display:grid;place-items:center;margin-bottom:20px}
+.tag{display:inline-flex;padding:5px 12px;background:var(--brand-100);border-radius:50px;font-size:11px;color:var(--brand-800);font-weight:700}
+.form-field{display:flex;flex-direction:column;gap:8px;font-size:13px;font-weight:700;min-width:0}
+.form-field input,.form-field select,.form-field textarea,.input{border:1px solid #d4e1df;background:white;border-radius:10px;padding:12px 14px;min-height:48px;color:var(--ink-900);width:100%;font-size:16px;font-weight:400}
+.form-field textarea{min-height:108px;resize:vertical}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{outline:2px solid var(--brand-600);outline-offset:1px}
+.form-field small{font-weight:400;color:var(--ink-700);font-size:12px}
+.field-error{color:var(--danger);font-size:12px;min-height:0}
+.form-field [aria-invalid=true]{border-color:var(--danger)}
+.full-width{grid-column:1/-1}
+.check-label{display:flex;align-items:flex-start;gap:12px;cursor:pointer;font-size:14px;min-height:44px;padding:10px 0}
+.check-label input{width:19px;height:19px;flex:0 0 19px;margin:3px 0 0;accent-color:var(--brand-700)}
+.callout{display:flex;gap:12px;padding:17px 21px;border:1px solid #e8dcc5;background:#fcf8ef;border-radius:12px;font-size:12px;color:#715422;line-height:1.7}
+.callout.info{background:var(--brand-100);border-color:#cde6e3;color:var(--brand-900)}
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);padding:15px 24px;border-radius:12px;background:var(--brand-900);color:white;z-index:200;box-shadow:var(--shadow);width:max-content;max-width:calc(100% - 32px)}
+.toast.error{background:#9a3232}
+.confirm-dialog{border:0;border-radius:22px;max-width:480px;width:calc(100% - 32px);padding:32px;box-shadow:var(--shadow)}
+.confirm-dialog::backdrop{background:#0b2c3680;backdrop-filter:blur(3px)}
+.confirm-dialog h2{font-size:26px}
+.confirm-dialog p{margin:15px 0 25px}
+.confirm-dialog .actions{justify-content:end;margin-top:25px}
+.status-chip{display:inline-flex;gap:6px;align-items:center;background:#e8f4f4;color:#15777b;padding:5px 10px;font-size:11px;font-weight:700;border-radius:6px;white-space:nowrap}
+.status-chip span{height:5px;width:5px;border-radius:50%;background:currentColor}
+.status-1{background:#eef0fd;color:#5c63b0}
+.status-2{background:#fff4de;color:#98620b}
+.status-3{background:#e8f1fd;color:#426ca5}
+.status-4{background:#e6f5eb;color:#228148}
+.status-5{background:#fbecec;color:#b54f4f}
+.summary-group h3{font-size:17px;padding-bottom:13px;margin-bottom:16px;border-bottom:1px solid var(--border)}
+.summary-group dl{margin:0;display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.summary-group dt{font-size:11px;color:var(--ink-700)}
+.summary-group dd{margin:4px 0 0;font-size:14px;white-space:pre-wrap;overflow-wrap:anywhere}
+.summary-group{min-width:0}
+.summary-group+.summary-group{margin-top:28px}
