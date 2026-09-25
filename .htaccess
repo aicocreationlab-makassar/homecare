@@ -1,0 +1,20 @@
+# Apache / LiteSpeed: place this file in the website document root.
+Options -MultiViews
+DirectoryIndex index.html
+RewriteEngine On
+
+# Redirect old public addresses; THE_REQUEST avoids redirecting internal rewrites.
+RewriteCond %{THE_REQUEST} \s/+index(?:\.html)?[?\s] [NC]
+RewriteRule ^index(?:\.html)?$ / [R=301,L]
+RewriteCond %{THE_REQUEST} \s/+[^?\s]+\.html[?\s] [NC]
+RewriteRule ^(.+)\.html$ /$1 [R=301,L,NE]
+
+# Normalize the optional final slash only for known extensionless pages.
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.+)/$ /$1 [R=301,L,NE]
+
+# Serve actual assets directly. Resolve a clean URL to a matching HTML file.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [END]

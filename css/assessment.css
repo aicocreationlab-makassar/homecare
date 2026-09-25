@@ -7,13 +7,13 @@
 .wizard-sidebar{background:var(--brand-900);border-radius:20px;padding:28px;color:white}
 .wizard-sidebar h2{font-size:18px;margin-bottom:25px}
 .wizard-steps{list-style:none;margin:0;padding:0}
-.wizard-steps li{display:flex;align-items:center;gap:12px;margin-bottom:25px;color:#b4cdca;font-size:12px}
-.wizard-steps li span{display:grid;place-items:center;width:29px;height:29px;border:1px solid #789f9c;border-radius:50%;font-size:11px;flex-shrink:0}
+.wizard-steps li{display:flex;align-items:center;gap:12px;margin-bottom:25px;color:#c5b4cd;font-size:12px}
+.wizard-steps li span{display:grid;place-items:center;width:29px;height:29px;border:1px solid #93789f;border-radius:50%;font-size:11px;flex-shrink:0}
 .wizard-steps li.current{color:white;font-weight:700}
-.wizard-steps li.current span{background:#d6eddf;color:var(--brand-900);border-color:#d6eddf}
+.wizard-steps li.current span{background:#e6d6ed;color:var(--brand-900);border-color:#e6d6ed}
 .wizard-steps li.done span{background:#ffffff1c;color:white}
 .wizard-help{border-top:1px solid #ffffff20;padding-top:22px;margin-top:25px}
-.wizard-help p{color:#c0d6d2;font-size:11px;margin-bottom:14px}
+.wizard-help p{color:#cfc0d6;font-size:11px;margin-bottom:14px}
 .wizard-help a{font-size:12px;display:flex;gap:8px;align-items:center}
 .form-card{background:white;border:1px solid var(--border);padding:33px;border-radius:20px}
 .form-card h2{font-size:25px}
@@ -21,7 +21,7 @@
 .form-card .grid-2{gap:20px}
 .form-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:13px}
 .form-heading span{font-size:10px;color:var(--brand-700);font-weight:700}
-.progress-track{background:#edf2f0;height:4px;border-radius:5px;margin-bottom:27px;overflow:hidden}
+.progress-track{background:#f1edf2;height:4px;border-radius:5px;margin-bottom:27px;overflow:hidden}
 .progress-track span{display:block;background:var(--brand-700);height:100%;transition:width .3s}
 .wizard-actions{border-top:1px solid var(--border);padding-top:24px;margin-top:28px;display:flex;justify-content:space-between;gap:15px}
 .form-save-note{margin-top:20px;text-align:center;font-size:10px;color:var(--ink-700)}

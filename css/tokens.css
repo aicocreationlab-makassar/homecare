@@ -1,3 +1,3 @@
 @font-face{font-family:Manrope;src:url('../assets/fonts/manrope.ttf') format('truetype');font-weight:400;font-display:swap}
 @font-face{font-family:Manrope;src:url('../assets/fonts/manrope-bold.ttf') format('truetype');font-weight:600 800;font-display:swap}
-:root{--brand-900:#0b4f55;--brand-800:#0e6269;--brand-700:#0f7a81;--brand-600:#15959a;--brand-100:#e7f5f4;--accent-500:#62b66f;--ink-900:#122b31;--ink-700:#52676c;--surface:#fff;--surface-soft:#f5f9f8;--border:#dde8e8;--danger:#c64545;--warning:#996014;--success:#198754;--radius:22px;--shadow:0 12px 40px #193f4710;--max-width:1200px}
+:root{--brand-900:#482159;--brand-800:#582b70;--brand-700:#763991;--brand-600:#9751ac;--brand-100:#f3eaf7;--accent-500:#df398a;--ink-900:#302238;--ink-700:#6d5c74;--surface:#fff;--surface-soft:#faf7fb;--border:#e9dfea;--danger:#c64545;--warning:#996014;--success:#198754;--radius:22px;--shadow:0 12px 40px #39194710;--max-width:1200px}

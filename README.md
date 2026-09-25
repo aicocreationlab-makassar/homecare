@@ -4,26 +4,35 @@ Website publik dan dashboard admin dengan HTML5, CSS3, dan JavaScript native. Ti
 
 ## Jalankan
 
-Dari folder project:
-
-```powershell
-python -m http.server 5500
-```
-
-Jika instalasi Python tidak tersedia, gunakan server file statis PowerShell yang disertakan:
+Dari folder project, gunakan server statis PowerShell yang mendukung URL bersih:
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File .\serve.ps1
 ```
 
-Alternatif: VS Code Live Server. Selalu gunakan alamat/origin yang sama; `localhost:5500` dan `127.0.0.1:5500` memiliki penyimpanan berbeda.
+Server sederhana seperti Python `http.server` atau Live Server standar tidak menerapkan aturan URL bersih project ini. Gunakan `serve.ps1`, atau hosting dengan rewrite yang sesuai. Selalu gunakan alamat/origin yang sama; `localhost:5500` dan `127.0.0.1:5500` memiliki penyimpanan berbeda.
 
-- Website: http://localhost:5500/index.html
-- Admin: http://localhost:5500/admin/login.html
+- Website: http://localhost:5500/
+- Admin: http://localhost:5500/admin/login
 - Username: `admin`
 - Password: `sa3demo2026`
 
 Login ini hanya gerbang demo berbasis sessionStorage, bukan autentikasi production.
+
+## Panduan klien dan URL
+
+Panduan lengkap untuk presentasi dan penggunaan website: [PANDUAN_KLIEN_SA3_HOMECARE.md](PANDUAN_KLIEN_SA3_HOMECARE.md).
+
+Alamat website yang ditetapkan: `https://sa3-homecare.dekatlokal`. Domain dan hosting belum dipublikasikan melalui pekerjaan lokal ini.
+
+- Halaman memakai URL bersih seperti `/layanan`, `/assessment`, dan `/admin/dashboard`.
+- File fisik `.html` tetap tersedia; server memetakannya tanpa mengekspos ekstensi di URL.
+- Server lokal mengalihkan `.html` ke URL bersih sambil mempertahankan query ID dan pilihan layanan.
+- `.htaccess` disertakan untuk Apache/LiteSpeed di document root dengan rewrite diaktifkan. Konfigurasi hosting ini perlu diuji pada server tujuan.
+- Server hosting lain perlu menerapkan pemetaan setara. Path yang tidak cocok dengan file nyata harus menghasilkan 404.
+- Tautan dan aset menggunakan path dari root domain; project ini ditujukan untuk document root, bukan subfolder hosting.
+- Logo WhatsApp menggunakan SVG hijau/putih dari paket resmi Meta 2026. Asal aset dicatat pada `assets/SOURCES.md`.
+- Tema ungu–pink diterapkan pada halaman publik dan admin. Menu publik mobile menggunakan dialog dengan animasi dari kanan, backdrop, tombol tutup, dan dukungan keyboard.
 
 ## Struktur
 
@@ -76,9 +85,13 @@ Jalankan server lokal terlebih dahulu. Pengujian memerlukan Playwright sebagai a
 ```powershell
 $env:PLAYWRIGHT_MODULE = 'C:\path\to\node_modules\playwright'
 node tests/smoke.cjs
+node tests/mobile.cjs
+node tests/navigation.cjs
 ```
 
 Uji meliputi login, seed, validasi, draft, submit, WhatsApp encoding, persistence status/catatan, pencarian, filter, delete, clear/reset, link internal, error browser, serta overflow pada 320, 360, 375, 390, 768, 1024, 1366, dan 1440 piksel. Screenshot disimpan di `tests/`.
+
+Uji navigasi tambahan memeriksa redirect `.html`, query yang dipertahankan, refresh alamat bersih, 404, menu dari kanan, tombol tutup, backdrop, Escape, fokus keyboard, serta perubahan ukuran layar.
 
 ## Batasan
 

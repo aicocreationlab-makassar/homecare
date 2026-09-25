@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "checks": [
+    "Legacy .html redirects preserve query",
+    "Clean URL direct load and reload",
+    "Unknown route returns 404",
+    "Official local WhatsApp asset",
+    "Drawer opens from right and animates",
+    "Close button, backdrop, Escape",
+    "Keyboard focus remains in modal",
+    "No drawer overflow at 320–768px",
+    "Desktop resize resets menu",
+    "Admin drawer opens from right"
+  ],
+  "pageErrors": []
+}

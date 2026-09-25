@@ -15,3 +15,11 @@ Aset berikut diunduh dan disimpan lokal dari website bisnis yang ditunjuk dalam 
 - Manrope: Google Fonts, SIL Open Font License, disertakan di `fonts/OFL.txt`.
 - AOS 2.3.4: https://github.com/michalsnik/aos — lisensi MIT disertakan di `vendor/aos/LICENSE`.
 - Ikon: markup SVG outline lokal pada `js/common.js`, tanpa CDN.
+
+## Logo WhatsApp resmi
+
+- Sumber: https://www.meta.com/brand/resources/whatsapp/whatsapp-brand/
+- Paket: `WhatsApp-Brand-Resource-Center.zip`, diunduh 25 September 2026 dari tautan unduhan pada halaman Meta tersebut.
+- `icons/whatsapp.svg`: `01_Glyph/01_Digital RGB/03_SVG/Digital_Glyph_Green_RGB_2026.svg`.
+- `icons/whatsapp-white.svg`: `01_Glyph/01_Digital RGB/03_SVG/Digital_Glyph_White_RGB_2026.svg`.
+- Kedua SVG disalin dari arsip tanpa perubahan bentuk atau warna. Varian hijau untuk latar terang, putih untuk tombol berwarna. Merek dan aset tetap milik WhatsApp/Meta.
