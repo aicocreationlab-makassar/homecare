@@ -603,7 +603,9 @@ Hal berikut perlu diselesaikan bersama pengelola website:
 6. Jika akan dipakai untuk pasien sungguhan, selesaikan backend, autentikasi, akses data, backup, dan pengelolaan privasi terlebih dahulu.
 7. Uji ulang link, form, WhatsApp, login, dan halaman admin pada hosting tujuan.
 
-File `.htaccess` disertakan untuk Apache/LiteSpeed. Hosting dengan jenis server lain memerlukan aturan setara. Perubahan URL tidak menggantikan proses pengaturan domain atau publikasi.
+Untuk hosting Vercel, file `vercel.json` disertakan agar alamat seperti `/layanan` dan `/admin/dashboard` dapat dibuka tanpa `.html`, termasuk saat di-refresh. File konfigurasi harus ikut pada deployment terbaru. Pengaturan project menggunakan preset Other dan folder root website, tanpa proses build.
+
+File `.htaccess` tetap disertakan untuk Apache/LiteSpeed; file tersebut tidak mengatur routing Vercel. Petunjuk deploy ulang tersedia pada `README.md`. Perubahan URL tidak menggantikan proses pengaturan domain atau publikasi.
 
 ## 24. Arah pengembangan berikutnya
 

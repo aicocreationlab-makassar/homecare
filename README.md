@@ -29,10 +29,22 @@ Alamat website yang ditetapkan: `https://sa3-homecare.dekatlokal`. Domain dan ho
 - File fisik `.html` tetap tersedia; server memetakannya tanpa mengekspos ekstensi di URL.
 - Server lokal mengalihkan `.html` ke URL bersih sambil mempertahankan query ID dan pilihan layanan.
 - `.htaccess` disertakan untuk Apache/LiteSpeed di document root dengan rewrite diaktifkan. Konfigurasi hosting ini perlu diuji pada server tujuan.
+- Vercel menggunakan `vercel.json` dengan `cleanUrls: true` dan `trailingSlash: false`; aturan `.htaccess` bukan konfigurasi Vercel.
 - Server hosting lain perlu menerapkan pemetaan setara. Path yang tidak cocok dengan file nyata harus menghasilkan 404.
 - Tautan dan aset menggunakan path dari root domain; project ini ditujukan untuk document root, bukan subfolder hosting.
 - Logo WhatsApp menggunakan SVG hijau/putih dari paket resmi Meta 2026. Asal aset dicatat pada `assets/SOURCES.md`.
 - Tema ungu–pink diterapkan pada halaman publik dan admin. Menu publik mobile menggunakan dialog dengan animasi dari kanan, backdrop, tombol tutup, dan dukungan keyboard.
+
+## Deploy atau perbarui deployment Vercel
+
+1. Sertakan `vercel.json` di folder yang sama dengan `index.html` ketika mengunggah atau melakukan push ke repository.
+2. Pada pengaturan Vercel, gunakan Framework Preset **Other**. Root Directory harus menunjuk folder yang berisi `index.html`, `vercel.json`, `admin/`, `css/`, dan `js/`.
+3. Project tidak memerlukan build. Biarkan Build Command kosong dan gunakan folder root project sebagai Output Directory (`.` jika perlu override), bukan `dist` atau `build`.
+4. Deploy versi terbaru yang sudah menyertakan konfigurasi ini. Redeploy deployment lama tanpa perubahan source tidak akan memasukkan file konfigurasi baru.
+5. Uji `/`, `/layanan`, `/assessment`, dan `/admin/login` langsung melalui address bar, lalu refresh. Uji juga `/layanan.html`; Vercel akan mengarahkannya ke `/layanan`.
+6. Pastikan query tetap tersedia pada `/assessment-success?id=...` dan `/admin/patient-detail?id=...`.
+
+`cleanUrls` memetakan alamat tanpa ekstensi ke file HTML terkait, termasuk halaman di dalam `admin/`. Tidak perlu rewrite seluruh URL ke `index.html`, karena setiap halaman memiliki file sendiri. Konfigurasi mengikuti [dokumentasi resmi Vercel](https://vercel.com/docs/project-configuration/vercel-json#cleanurls).
 
 ## Struktur
 
